@@ -1,0 +1,1130 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! LPJ-GUESS instruction file created on 03/23/2022 with INSParser v1.0.1.
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+f_denitri_gas_max 0.33
+f_denitri_max 0.33
+f_nitri_gas_max 0.25
+f_nitri_max 0.1
+k_c 0.017
+k_n 0.083
+ifcalccton 1
+ifcalcsla 1
+ifcarbonfreeze 1
+ifcdebt 1
+ifcentury 1
+ifdetrendspinuptemp 0
+ifdisturb 1
+ifdroughtlimitedestab 0
+ifinundationstress 1
+ifmethane 0
+ifmultilayersnow 1
+ifnlim 1
+ifntransform 1
+iforganicsoilproperties 0
+ifrainonwetdaysonly 1
+ifsaturatewetlands 0
+ifsme 1
+ifsmoothgreffmort 1
+iftwolayersoil 0
+wetland_runon 0
+
+
+alphaa_nlim 0.6
+disable_mort_greff 0
+distinterval 300
+estinterval 5
+firemodel "globfirm"
+freenyears 100
+hydraulic_system "VPD_based_GC"
+ifbgestab 1
+ifbvoc 0
+ifcalccton 1
+ifcalcsla 1
+ifcdebt 1
+ifcentury 1
+ifdisturb 1
+ifdroughtlimitedestab 0
+ifnlim 1
+ifrainonwetdaysonly 1
+ifsme 1
+ifsmoothgreffmort 1
+ifstochestab 1
+ifstochmort 1
+nfix_a 0.102
+nfix_b 0.524
+npatch 1
+nrelocfrac 0.5
+nyear_spinup 1000
+output_time_range "scenario"
+outputdirectory "./"
+patcharea 1000
+restart 0
+rootdistribution "jackson"
+run_landcover 0
+save_state 0
+suppress_annually_output 0
+suppress_daily_output 1
+suppress_monthly_output 0
+textured_soil 1
+title "'LPJ-GUESS cohort mode - global pfts' "
+vegmode "cohort"
+wateruptake "rootdist"
+weathergenerator "gwgen"
+year_begin 1800
+year_end 2010
+
+soildepth_upper 500
+soildepth_lower 1000
+soil_wilting_point -3.5
+
+
+param "file_co2"     (str "/Users/pp/data/drought_heat_mip/constant_co2.txt")
+param "file_gridlist"     (str "/Users/pp/data/drought_heat_mip/gridlist_example10.txt")
+param "file_hurs"     (str "")
+param "file_insol"     (str "/Users/pp/data/ClimateData/GLDAS/Global/GLDAS_1948_2010_swdown_daily_quarter.nc")
+param "file_max_temp"     (str "")
+param "file_min_temp"     (str "")
+param "file_mip_nhx"     (str "/Users/pp/data/drought_heat_mip/nitrogen_forcings/ndep_NHx_2011_1x1deg.nc")
+param "file_mip_noy"     (str "/Users/pp/data/drought_heat_mip/nitrogen_forcings/ndep_NOy_2011_1x1deg.nc")
+param "file_prec"     (str "/Users/pp/data/ClimateData/GLDAS/Global/GLDAS_1948_2010_prec_daily_quarter.nc")
+param "file_pres"     (str "")
+param "file_relhum"     (str "")
+param "file_soildata"     (str "/Users/pp/Documents/Repos/drought_heat_mip/data/env/soils_lpj.dat")
+param "file_specifichum"     (str "")
+param "file_temp"     (str "/Users/pp/data/ClimateData/GLDAS/Global/GLDAS_1948_2010_temp_daily_quarter.nc")
+param "file_vpd"     (str "/Users/pp/data/ClimateData/GLDAS/Global/GLDAS_1948_2010_VPD_allmean_quarter.nc")
+param "file_wetdays"     (str "")
+param "file_wind"     (str "")
+param "file_windspeed"     (str "/Users/pp/data/ClimateData/GLDAS/Global/GLDAS_1948_2010_windspeed_daily_quarter.nc")
+param "variable_hurs"     (str "")
+param "variable_insol"     (str "insol")
+param "variable_max_temp"     (str "tasmax")
+param "variable_min_temp"     (str "tasmin")
+param "variable_prec"     (str "prec")
+param "variable_temp"     (str "temp")
+param "variable_vpd"     (str "vpd")
+param "variable_windspeed"     (str "windspeed")
+
+
+pft "BNE" (
+	alphar 2
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 8
+	eps_mon 1.7 0.7 0.4 0.24 0.24 0.2 0.84 0.26 0.22 
+	est_max 0.05
+	fireresist 0.3
+	fnstorage 0.05
+	ga 0.14
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 500
+	gmin 0.3
+	greff_min 0.03
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.06
+	inund_duration 0
+	isohydricity 0
+	k_allom1 150
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 5000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 3
+	leafphysiognomy "needleleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 500
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 350000
+	pathway "c3"
+	phengdd5ramp 0
+	phenology "evergreen"
+	psi50_xylem -3.2
+	pstemp_high 25
+	pstemp_low 10
+	pstemp_max 38
+	pstemp_min -4
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 1
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 0
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est -1
+	tcmin_est -30
+	tcmin_surv -31
+	turnover_harv_prod 1
+	turnover_leaf 0.33
+	turnover_root 0.7
+	turnover_sap 0.05
+	twmin_est 5
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "BINE" (
+	alphar 11
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 8
+	eps_mon 1.7 0.7 0.4 0.24 0.24 0.2 0.84 0.26 0.22 
+	est_max 0.2
+	fireresist 0.3
+	fnstorage 0.05
+	ga 0.14
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 500
+	gmin 0.3
+	greff_min 0.09
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.06
+	inund_duration 0
+	isohydricity 0
+	k_allom1 150
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 5000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 3
+	leafphysiognomy "needleleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 500
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 2500000
+	pathway "c3"
+	phengdd5ramp 0
+	phenology "evergreen"
+	psi50_xylem -3.2
+	pstemp_high 25
+	pstemp_low 10
+	pstemp_max 38
+	pstemp_min -4
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 1
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 0
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est -1
+	tcmin_est -30
+	tcmin_surv -31
+	turnover_harv_prod 1
+	turnover_leaf 0.33
+	turnover_root 0.7
+	turnover_sap 0.1
+	twmin_est 5
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "BNS" (
+	alphar 11
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 8
+	eps_mon 3.18 0.72 0.18 0.12 0.14 0.11 0.2 0.13 0.02 
+	est_max 0.2
+	fireresist 0.3
+	fnstorage 0.15
+	ga 0.14
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 350
+	gmin 0.3
+	greff_min 0.09
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.06
+	inund_duration 0
+	isohydricity 0
+	k_allom1 150
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 5000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 0.5
+	leafphysiognomy "needleleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 300
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 2500000
+	pathway "c3"
+	phengdd5ramp 200
+	phenology "summergreen"
+	psi50_xylem -3.2
+	pstemp_high 25
+	pstemp_low 10
+	pstemp_max 38
+	pstemp_min -4
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 1
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 1
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est -2
+	tcmin_est -1000
+	tcmin_surv -1000
+	turnover_harv_prod 1
+	turnover_leaf 1
+	turnover_root 0.7
+	turnover_sap 0.1
+	twmin_est -1000
+	twminusc 43
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "TeNE" (
+	alphar 11
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 8
+	eps_mon 1.7 0.7 0.4 0.24 0.24 0.2 0.84 0.26 0.22 
+	est_max 0.2
+	fireresist 0.3
+	fnstorage 0.05
+	ga 0.14
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 2000
+	gmin 0.3
+	greff_min 0.09
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.06
+	inund_duration 0
+	isohydricity 0
+	k_allom1 150
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 5000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 3
+	leafphysiognomy "needleleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 300
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 2500000
+	pathway "c3"
+	phengdd5ramp 0
+	phenology "evergreen"
+	psi50_xylem -3.2
+	pstemp_high 25
+	pstemp_low 15
+	pstemp_max 38
+	pstemp_min -2
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 1
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 0
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est 10
+	tcmin_est -2
+	tcmin_surv -2
+	turnover_harv_prod 1
+	turnover_leaf 0.33
+	turnover_root 0.7
+	turnover_sap 0.1
+	twmin_est 5
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "TeBS" (
+	alphar 2
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 45
+	eps_mon 0.52 0.14 0.1 0.04 0.49 0.01 0.04 0.18 0.08 
+	est_max 0.05
+	fireresist 0.1
+	fnstorage 0.15
+	ga 0.04
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 1100
+	gmin 0.5
+	greff_min 0.03
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.02
+	inund_duration 0
+	isohydricity 0.5
+	k_allom1 250
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 6000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 0.5
+	leafphysiognomy "broadleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 700
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 350000
+	pathway "c3"
+	phengdd5ramp 200
+	phenology "summergreen"
+	psi50_xylem -5
+	pstemp_high 25
+	pstemp_low 15
+	pstemp_max 38
+	pstemp_min -2
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 1
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 1
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est 6
+	tcmin_est -13
+	tcmin_surv -14
+	turnover_harv_prod 1
+	turnover_leaf 1
+	turnover_root 0.7
+	turnover_sap 0.05
+	twmin_est 5
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "IBS" (
+	alphar 11
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 45
+	eps_mon 0.52 0.14 0.1 0.04 0.49 0.01 0.04 0.18 0.08 
+	est_max 0.2
+	fireresist 0.1
+	fnstorage 0.15
+	ga 0.04
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 350
+	gmin 0.5
+	greff_min 0.09
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.02
+	inund_duration 0
+	isohydricity 0
+	k_allom1 250
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 6000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 0.5
+	leafphysiognomy "broadleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 300
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 2500000
+	pathway "c3"
+	phengdd5ramp 200
+	phenology "summergreen"
+	psi50_xylem -3.2
+	pstemp_high 25
+	pstemp_low 10
+	pstemp_max 38
+	pstemp_min -4
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 1
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 1
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0 
+	tcmax_est 7
+	tcmin_est -30
+	tcmin_surv -30
+	turnover_harv_prod 1
+	turnover_leaf 1
+	turnover_root 0.7
+	turnover_sap 0.1
+	twmin_est -1000
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "TeBE" (
+	alphar 2
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 24
+	eps_mon 0.74 0.2 0.2 0.09 0.13 0.08 0.02 0.08 0.08 
+	est_max 0.05
+	fireresist 0.3
+	fnstorage 0.05
+	ga 0.04
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 2000
+	gmin 0.5
+	greff_min 0.03
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.02
+	inund_duration 0
+	isohydricity 0
+	k_allom1 250
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 6000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 3
+	leafphysiognomy "broadleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 300
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 350000
+	pathway "c3"
+	phengdd5ramp 0
+	phenology "evergreen"
+	psi50_xylem -3.2
+	pstemp_high 25
+	pstemp_low 15
+	pstemp_max 38
+	pstemp_min -2
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 1
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 0
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est 18.8
+	tcmin_est 0
+	tcmin_surv -1
+	turnover_harv_prod 1
+	turnover_leaf 0.33
+	turnover_root 0.7
+	turnover_sap 0.05
+	twmin_est 5
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "TrBE" (
+	alphar 2
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 2.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 24
+	eps_mon 0.32 0.09 0.07 0.06 0.06 0.04 0.04 0.07 0.05 
+	est_max 0.05
+	fireresist 0.1
+	fnstorage 0.05
+	ga 0.04
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 0
+	gmin 0.5
+	greff_min 0.03
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.02
+	inund_duration 0
+	isohydricity 0.9
+	k_allom1 250
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 6000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 2
+	leafphysiognomy "broadleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 500
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 350000
+	pathway "c3"
+	phengdd5ramp 0
+	phenology "evergreen"
+	psi50_xylem -7
+	pstemp_high 30
+	pstemp_low 25
+	pstemp_max 55
+	pstemp_min 2
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 0.15
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 0
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est 1000
+	tcmin_est 15.5
+	tcmin_surv 15.5
+	turnover_harv_prod 1
+	turnover_leaf 0.5
+	turnover_root 0.7
+	turnover_sap 0.05
+	twmin_est -1000
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "TrIBE" (
+	alphar 11
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 24
+	eps_mon 0.32 0.09 0.07 0.06 0.06 0.04 0.04 0.07 0.05 
+	est_max 0.2
+	fireresist 0.1
+	fnstorage 0.05
+	ga 0.04
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 0
+	gmin 0.5
+	greff_min 0.09
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.02
+	inund_duration 0
+	isohydricity 0
+	k_allom1 250
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 6000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 2
+	leafphysiognomy "broadleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 200
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 2500000
+	pathway "c3"
+	phengdd5ramp 0
+	phenology "evergreen"
+	psi50_xylem -5.2
+	pstemp_high 30
+	pstemp_low 25
+	pstemp_max 55
+	pstemp_min 2
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 0.15
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 0
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est 1000
+	tcmin_est 15.5
+	tcmin_surv 15.5
+	turnover_harv_prod 1
+	turnover_leaf 0.5
+	turnover_root 0.7
+	turnover_sap 0.1
+	twmin_est -1000
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "TrBR" (
+	alphar 11
+	cav_slope -5
+	crownarea_max 50
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 45
+	eps_mon 0.95 0.26 0.22 0.18 0.18 0.13 0.12 0.22 0.14 
+	est_max 0.2
+	fireresist 0.3
+	fnstorage 0.15
+	ga 0.04
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 0
+	gmin 0.5
+	greff_min 0.09
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.02
+	inund_duration 0
+	isohydricity 0
+	k_allom1 250
+	k_allom2 60
+	k_allom3 0.67
+	k_chilla 0
+	k_chillb 100
+	k_chillk 0.05
+	k_latosa 6000
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.477E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 0.5
+	leafphysiognomy "broadleaf"
+	lifeform "tree"
+	litterme 0.3
+	longevity 400
+	ltor_max 1
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.0028
+	parff_min 2500000
+	pathway "c3"
+	phengdd5ramp 0
+	phenology "raingreen"
+	psi50_xylem -5.2
+	pstemp_high 30
+	pstemp_low 25
+	pstemp_max 55
+	pstemp_min 2
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 0.15
+	root_beta 0.982
+	rootdist 0.12 0.12 0.12 0.12 0.12 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 
+	seas_iso 0
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est 1000
+	tcmin_est 15.5
+	tcmin_surv 15.5
+	turnover_harv_prod 1
+	turnover_leaf 1
+	turnover_root 0.7
+	turnover_sap 0.1
+	twmin_est -1000
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "C3G" (
+	alphar 3
+	cav_slope -5
+	crownarea_max 12.34
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 16
+	eps_mon 0.37 0.2 0.23 0.1 0.1 0.09 0.1 0.22 0.19 
+	est_max 0.05
+	fireresist 0.5
+	fnstorage 0.3
+	ga 0.03
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 0
+	gmin 0.5
+	greff_min 0
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.01
+	inund_duration 0
+	isohydricity 0
+	k_allom1 250
+	k_allom2 36
+	k_allom3 0.22
+	k_chilla 0
+	k_chillb 0
+	k_chillk 0
+	k_latosa 1234
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.876E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 0.5
+	leafphysiognomy "broadleaf"
+	lifeform "grass"
+	litterme 0.2
+	longevity 0
+	ltor_max 0.5
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.00551
+	parff_min 1000000
+	pathway "c3"
+	phengdd5ramp 100
+	phenology "any"
+	psi50_xylem -3.2
+	pstemp_high 30
+	pstemp_low 10
+	pstemp_max 45
+	pstemp_min -5
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 1
+	root_beta 0.9555
+	rootdist 0.18 0.18 0.18 0.18 0.18 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 
+	seas_iso 1
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est 1000
+	tcmin_est -1000
+	tcmin_surv -1000
+	turnover_harv_prod 1
+	turnover_leaf 1
+	turnover_root 0.7
+	turnover_sap 0.05
+	twmin_est -1000
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)
+
+
+pft "C4G" (
+	alphar 3
+	cav_slope -5
+	crownarea_max 12.34
+	cton_root 29
+	cton_sap 330
+	delta_psi_max 1.5
+	drought_tolerance 0.0001
+	emax 5
+	eps_iso 8
+	eps_mon 0.48 0.19 0.67 0.14 0.12 0.13 0.14 0.29 0.24 
+	est_max 0.05
+	fireresist 0.5
+	fnstorage 0.3
+	ga 0.03
+	gdd0_max 100000
+	gdd0_min 0
+	gdd5min_est 0
+	gmin 0.5
+	greff_min 0
+	harv_eff 0
+	harvest_slow_frac 0
+	has_aerenchyma 0
+	include 1
+	intc 0.01
+	inund_duration 0
+	isohydricity 0
+	k_allom1 250
+	k_allom2 36
+	k_allom3 0.22
+	k_chilla 0
+	k_chillb 0
+	k_chillk 0
+	k_latosa 1234
+	k_rp 1.6
+	kest_bg 0.1
+	kest_pres 1
+	kest_repr 200
+	kl_max 2.5
+	km_volume 1.876E-06
+	kr_max 7.5
+	ks_max 40
+	lambda_max 0.9
+	landcover "natural"
+	leaflong 0.5
+	leafphysiognomy "broadleaf"
+	lifeform "grass"
+	litterme 0.2
+	longevity 0
+	ltor_max 0.5
+	max_snow 100000
+	min_snow 0
+	nuptoroot 0.00551
+	parff_min 1000000
+	pathway "c4"
+	phengdd5ramp 100
+	phenology "any"
+	psi50_xylem -3.2
+	pstemp_high 45
+	pstemp_low 20
+	pstemp_max 55
+	pstemp_min 6
+	reprfrac 0.1
+	res_outtake 0
+	respcoeff 0.15
+	root_beta 0.9555
+	rootdist 0.18 0.18 0.18 0.18 0.18 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 
+	seas_iso 0
+	sla 1
+	storfrac_mon 0.4 0.8 0.8 0.4 0.4 0.5 0.8 0.2 0.5 
+	tcmax_est 1000
+	tcmin_est 15.5
+	tcmin_surv 15.5
+	turnover_harv_prod 1
+	turnover_leaf 1
+	turnover_root 0.7
+	turnover_sap 0.05
+	twmin_est -1000
+	twminusc 0
+	wooddens 200
+	wscal_min 0.35
+	wtp_max -301
+)

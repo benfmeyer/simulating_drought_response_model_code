@@ -1,0 +1,104 @@
+!///////////////////////////////////////////////////////////////////////////////////////
+
+
+suppress_daily_output 0
+suppress_monthly_output 0
+suppress_annually_output 0
+output_time_range "SCENARIO"
+year_begin 1990
+year_end 2010
+output_data_format "NC4_HDF5"
+
+
+! N deposition (blank string to use constant pre-industrial level of 2 kgN/ha/year)
+!param "file_ndep"     (str "/home/konni/Documents/konni/projekte/phd/data/simulation_inputs/other_inputs/GlobalNitrogenDeposition.bin")
+!ndep_timeseries  "RCP85"
+!TODO make sure that NDEP is not the constant 2!
+
+!param "file_temp"     (str "/home/konni/Documents/konni/projekte/phd/drought_heat_mip/inputs/control_tas_lpj_sel.nc")
+!param "variable_temp" (str "tas")
+
+!param "file_prec"     (str "/home/konni/Documents/konni/projekte/phd/drought_heat_mip/inputs/control_pr_lpj_sel.nc")
+!param "variable_prec" (str "pr")
+
+!param "file_insol"      (str "/home/konni/Documents/konni/projekte/phd/drought_heat_mip/inputs/control_swd_lpj_sel.nc")
+!param "variable_insol"  (str "swd")
+
+
+param "file_insol"     (str "F:\ClimateData\GLDAS_1948_2010_swdown_daily_half.nc")
+param "file_prec"     (str "F:\ClimateData\GLDAS_1948_2010_prec_daily_half.nc")
+param "file_temp"     (str "F:\ClimateData\GLDAS_1948_2010_temp_daily_half.nc")
+
+param "file_vpd"     (str "")
+param "file_wetdays"     (str "")
+param "file_windspeed"     (str "")
+param "file_hurs"     (str "")
+
+param "variable_insol"     (str "insol")
+param "variable_prec"     (str "prec")
+param "variable_temp"     (str "temp")
+param "variable_hurs"     (str "temp")
+
+param "file_specifichum"      (str "")
+param "variable_specifichum"  (str "Qair")
+
+!TODO these two are only needed for BVOC I think
+param "file_min_temp"      (str "")
+param "variable_min_temp"  (str "tasmin")
+param "file_max_temp"      (str "")
+param "variable_max_temp"  (str "tasmax")
+
+param "file_pres"     (str "")
+param "variable_pres" (str "psl")
+
+
+import "F:\SourceTreeRepos\drought_heat_mip\data\ins\global.ins"
+
+firemodel "GLOBFIRM"
+
+
+searchradius_soil 5.0
+!searchradius 5
+param "file_soildata" (str "F:\SourceTreeRepos\drought_heat_mip\data\env\soils_lpj.dat")
+
+
+!param "file_gridlist" (str "/home/konni/Documents/konni/projekte/phd/drought_heat_mip/insfiles/gridlist_one_cell_cf.txt")
+param "file_gridlist"     (str "F:\ClimateData\Amazon\CAX.txt")
+
+
+
+param "file_co2"      (str "Z:\data\konstantin\drought_heat_mip\inputs\constant_co2.txt")
+!param "file_cru"      (str "/home/konni/Documents/konni/projekte/phd/data/simulation_inputs/hydraulics_input/HydraulicsDriverSetup/Cruncep_1901_2015.bin")
+!param "file_cru_misc" (str "/home/konni/Documents/konni/projekte/phd/data/simulation_inputs/hydraulics_input/HydraulicsDriverSetup/Cruncep_1901_2015misc.bin")
+
+!(0) normal run with spinup then historic climate (eg. S2, S3), (1) use the spinup climate during the whole run (eg. S0, S1) 
+!fixed_spinup_climate 0
+
+param "file_mip_noy" (str "Z:\data\konstantin\drought_heat_mip\inputs\nitrogen_forcings\ndep_NOy_2011_1x1deg.nc")
+param "file_mip_nhx" (str "Z:\data\konstantin\drought_heat_mip\inputs\nitrogen_forcings\ndep_NHx_2011_1x1deg.nc")
+
+
+nyear_spinup 1
+freenyears 0
+
+
+!firsthistyear 2000
+!lasthistyear 2001 !TODO the simulation goes until 2099 anyway, why is that??
+
+
+
+
+
+! Wet days can only be used with monthly precipitation, but we have daily. Need to write the parameter here though to make it work.
+param "file_wetdays"     (str "")
+param "variable_wetdays" (str "")
+param "file_relhum"     (str "")
+param "variable_relhum" (str "")
+param "file_wind"     (str "")
+param "variable_wind" (str "")
+
+! This would be needed for BLAZE fire. Not needed for GLOBFIRM though
+param "file_popdens" (str "")
+param "variable_popdens" (str "population_density")
+param "file_simfire" (str "")
+param "variable_simfire" (str "whatev")

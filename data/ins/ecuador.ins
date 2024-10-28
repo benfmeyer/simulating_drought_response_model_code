@@ -1,0 +1,69 @@
+import "/home/benfmeyer/Documents/guess4.1_hydraulics/data/ins/global_soiln.ins"
+import "/home/benfmeyer/Documents/guess4.1_hydraulics/data/ins/global_hyd_test.ins"
+hydraulic_system "STANDARD"
+
+param "file_gridlist_cf" (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/gridlist/gridlist_Ecuador_ECSF_grid.txt")
+param "file_gridlist" (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/gridlist/tt.txt")
+
+param "file_co2"      (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/co2_1764_2020_observed.dat")
+
+! N deposition (blank string to use constant pre-industrial level of 2 kgN/ha/year)
+param "file_ndep"     (str "/home/benfmeyer/Documents/PhD/LPJ-GUESS4.0.1/LPJ-GUESS_Drivers/driver_data/GlobalNitrogenDeposition.bin")
+param "file_ndep"     (str "")
+
+!param "file_temp"     (str "/home/benfmeyer/Documents/PhD/open_projects/lpjg_hyd_europe/crujrav2.2/crujra.v2.2.5d.tmp_1901-2020_eu.nc")
+param "file_temp"     (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/crujra.v2.0.temp_Ecuador.nc")
+param "variable_temp" (str "temp")
+
+!param "file_prec"     (str "/home/benfmeyer/Documents/PhD/open_projects/lpjg_hyd_europe/crujrav2.2/crujra.v2.2.5d.pre_1901-2020_eu.nc")
+param "file_prec"     (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/crujra.v2.0.prec_Ecuador.nc")
+param "variable_prec" (str "prec")
+
+!param "file_insol"      (str "/home/benfmeyer/Documents/PhD/open_projects/lpjg_hyd_europe/crujrav2.2/crujra.v2.2.5d.dswrf_1901-2020_eu.nc")
+param "file_insol"      (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/crujra.v2.0.insol_Ecuador.nc")
+param "variable_insol"  (str "insol")
+
+!param "file_wind" (str "/home/benfmeyer/Documents/PhD/open_projects/lpjg_hyd_europe/crujrav2.2/crujra.v2.2.5d.ws_1901-2020_eu.nc")
+param "file_wind" (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/crujra.v2.0.wind_Ecuador.nc")
+param "variable_wind"  (str "wind")
+
+! Needed if relative humidity is not supplied
+!param "file_pres"     (str "/home/benfmeyer/Documents/PhD/open_projects/lpjg_hyd_europe/crujrav2.2/crujra.v2.2.5d.pres_1901-2020_eu.nc")
+ param "file_pres" (str "")
+ param "variable_pres" (str "pres")
+
+! Needed if relative humidity is not supplied
+ !param "file_specifichum" (str "/home/benfmeyer/Documents/PhD/open_projects/lpjg_hyd_europe/crujrav2.2/crujra.v2.2.5d.spfh_1901-2020_eu.nc")
+ param "file_specifichum" (str "")
+ param "variable_specifichum" (str "specifichum")
+
+param "file_mip_noy" (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/ndep_NOy_2011_1x1deg.nc")
+param "file_mip_nhx" (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/ndep_NHx_2011_1x1deg.nc")
+
+! Soil map
+param "file_soildata" (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/soils_lpj.dat")
+
+!/////////////////////////////////////////////////////////////
+! DONT HAVE THESE FUR CRUJRA
+
+param "file_vpd" (str "")
+param "variable_vpd" (str "vpd")
+
+!param "file_relhum" (str "/home/benfmeyer/Documents/guess4.1_hydraulics/data/env/crujra.v2.0.rhum_Ecuador.nc")
+param "file_relhum" (str "")
+param "variable_relhum"	(str "rhum")
+
+!///////////////////////////////////////////////////////////////
+!DON'T NEED THESE FOR HYDRAULICS
+
+! Min/max temp is required for BVOC,
+! if BVOC is switched off these can be set to ""
+param "file_min_temp"      (str "")
+param "variable_min_temp"  (str "min_temp")
+
+param "file_max_temp"      (str "")
+param "variable_max_temp"  (str "max_temp")
+
+! Wet days can only be used with monthly precipitation
+param "file_wetdays"     (str "")
+param "variable_wetdays" (str "wetdays")

@@ -1,0 +1,45 @@
+set(headers
+  config.h
+  guess.h
+  guesscontainer.h
+  guessmath.h
+  outputchannel.h
+  archive.h
+  framework.h
+  shell.h
+  partitionedmapserializer.h
+  guessserializer.h
+  parallel.h
+  commandlinearguments.h
+  parameters.h
+  outputmodule.h
+  inputmodule.h
+  guessstring.h
+  externalinput.h
+  indata.h
+  smartoutput.h
+  equation_solvers.h
+)
+
+set(source
+  guess.cpp
+  outputchannel.cpp
+  archive.cpp
+  framework.cpp
+  shell.cpp
+  partitionedmapserializer.cpp
+  guessserializer.cpp
+  guessmath.cpp
+  parallel.cpp
+  commandlinearguments.cpp
+  parameters.cpp
+  outputmodule.cpp
+  inputmodule.cpp
+  guessstring.cpp
+  externalinput.cpp
+  indata.cpp
+  smartoutput.cpp
+  equation_solvers.cpp
+)
+
+include(add_guess_sources)
